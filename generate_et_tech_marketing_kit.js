@@ -147,7 +147,7 @@ const path = require('path');
                 .cover-hero {
                     background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
                     color: white;
-                    padding: 80px 50px;
+                    padding: 50px 50px;
                     text-align: center;
                     border-bottom: 15px solid #00f2fe;
                 }
@@ -165,7 +165,7 @@ const path = require('path');
                     font-weight: 800;
                 }
                 .cover-content {
-                    padding: 60px 50px;
+                    padding: 40px 50px;
                     flex-grow: 1;
                 }
                 .big-text {
@@ -274,8 +274,8 @@ const path = require('path');
             <div class="page">
                 <div class="flyer-hero">
                     <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
-                        <img src="${logoDataUri}" style="width: 70px; height: 70px; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
-                        <div style="font-size: 72px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                        <img src="${logoDataUri}" style="width: 50px; height: 50px; background: white; padding: 6px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+                        <div style="font-size: 56px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
                     </div>
                     <h1>Save Time. Get More Leads.<br><span class="highlight">Increase Revenue.</span></h1>
                     <div class="sub-hero">We take over your entire tech stack so you can focus on running your business.</div>
@@ -320,9 +320,9 @@ const path = require('path');
             <!-- PAGE 2: BROCHURE P1 -->
             <div class="page">
                 <div class="cover-hero">
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 25px; margin-bottom: 30px;">
-                        <img src="${logoDataUri}" style="width: 90px; height: 90px; background: white; padding: 10px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
-                        <div style="font-size: 96px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                        <img src="${logoDataUri}" style="width: 70px; height: 70px; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+                        <div style="font-size: 72px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
                     </div>
                     <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
