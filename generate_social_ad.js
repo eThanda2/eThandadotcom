@@ -59,31 +59,34 @@ const path = require('path');
                 .highlight-yellow {
                     color: #fbbf24;
                 }
-                .pain-point {
-                    font-size: 40px;
+                .services-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                    width: 900px;
+                    margin: 20px auto 30px auto;
+                }
+                .service-box {
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 2px solid rgba(0, 242, 254, 0.3);
+                    border-radius: 16px;
+                    padding: 20px 25px;
+                    text-align: left;
+                }
+                .service-title {
+                    font-size: 28px;
+                    font-weight: 800;
+                    color: #00f2fe;
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .service-desc {
+                    font-size: 20px;
                     font-weight: 400;
                     color: #e2e8f0;
-                    margin: 0 80px 25px 80px;
                     line-height: 1.4;
-                }
-                .solution {
-                    background: rgba(0, 242, 254, 0.1);
-                    border: 3px dashed #00f2fe;
-                    padding: 25px 50px;
-                    border-radius: 20px;
-                    font-size: 48px;
-                    font-weight: 700;
-                    color: #00f2fe;
-                    margin-bottom: 25px;
-                }
-                .pricing {
-                    font-size: 45px;
-                    font-weight: 700;
-                    color: #fbbf24;
-                    margin-bottom: 35px;
-                    background: rgba(251, 191, 36, 0.15);
-                    padding: 15px 40px;
-                    border-radius: 50px;
                 }
                 .cta-container {
                     background: white;
@@ -146,16 +149,23 @@ const path = require('path');
             
             <h1>Are you a <span class="highlight-yellow">Small Business</span> owner?</h1>
             
-            <div class="pain-point">
-                Looking for tech solutions but worried about the high cost?
-            </div>
-            
-            <div class="solution">
-                Problem Solved. Time Saved.
-            </div>
-
-            <div class="pricing">
-                Complete Websites Start at $99
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-title">🌐 Custom Websites</div>
+                    <div class="service-desc">Gorgeous, fast sites starting at just $99.</div>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">📱 Automated Follow-Ups</div>
+                    <div class="service-desc">Instantly text back missed calls. Secure every lead.</div>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">🛒 E-Commerce</div>
+                    <div class="service-desc">High-converting digital storefronts.</div>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">⚙️ Tech Cleanup</div>
+                    <div class="service-desc">Audit, consolidate, and automate your workflow.</div>
+                </div>
             </div>
             
             <div class="cta-container">
