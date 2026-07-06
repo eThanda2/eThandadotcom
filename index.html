@@ -430,31 +430,39 @@
   <!-- Scripts -->
   <script src="app.js"></script>
 
+
 <!-- CRM Integration Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
     forms.forEach(form => {
       form.addEventListener("submit", function(e) {
-        // Fire request to CRM in the background while Formspree submission proceeds
-        try {
-          const formData = new FormData(form);
-          const data = {
-            name: formData.get('name') || formData.get('fullName') || 'Unknown',
-            email: formData.get('email') || formData.get('_replyto') || 'Unknown',
-            phone: formData.get('phone') || formData.get('contact') || '',
-            message: formData.get('message') || '',
-            source: window.location.pathname || 'Website Contact Form'
-          };
-          
-          fetch('https://leads.ethanda.com/api/leads', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-        } catch (err) {
-          console.error("Failed to send lead to CRM", err);
+        e.preventDefault(); // Stop immediate navigation
+        
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
         }
+        
+        const formData = new FormData(form);
+        const data = {
+          name: formData.get('name') || formData.get('fullName') || 'Unknown',
+          email: formData.get('email') || formData.get('_replyto') || 'Unknown',
+          phone: formData.get('phone') || formData.get('contact') || '',
+          message: formData.get('message') || '',
+          source: window.location.pathname || 'Website Contact Form'
+        };
+        
+        // 1. Send to CRM
+        fetch('https://leads.ethanda.com/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }).finally(() => {
+          // 2. Resume Formspree submission
+          form.submit();
+        });
       });
     });
   });
