@@ -40,6 +40,7 @@ const path = require('path');
                     position: relative;
                     background: white;
                     padding-bottom: 60px; /* Room for global bar */
+                    box-sizing: border-box;
                 }
                 .global-bar {
                     position: absolute;
