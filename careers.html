@@ -307,6 +307,36 @@
   </footer>
 
   <script src="app.js"></script>
+
+<!-- CRM Integration Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+    forms.forEach(form => {
+      form.addEventListener("submit", function(e) {
+        // Fire request to CRM in the background while Formspree submission proceeds
+        try {
+          const formData = new FormData(form);
+          const data = {
+            name: formData.get('name') || formData.get('fullName') || 'Unknown',
+            email: formData.get('email') || formData.get('_replyto') || 'Unknown',
+            phone: formData.get('phone') || formData.get('contact') || '',
+            message: formData.get('message') || '',
+            source: window.location.pathname || 'Website Contact Form'
+          };
+          
+          fetch('https://leads.ethanda.com/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        } catch (err) {
+          console.error("Failed to send lead to CRM", err);
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
 
