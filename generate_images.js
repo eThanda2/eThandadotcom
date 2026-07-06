@@ -274,7 +274,7 @@ const path = require('path');
             <div class="cover-content">
                 <div class="big-text">We handle the tech.<br>You handle the business.</div>
                 <div class="description">
-                    Most local businesses are losing thousands of dollars a month because their website is outdated, they miss phone calls while on the job, or they are paying for 10 different expensive software subscriptions. eThanda Technologies partners with local businesses to solve this.
+                    Most local businesses are losing thousands of dollars a month because their website is outdated, they miss phone calls while on the job, or they are paying for 10 different expensive software subscriptions. eT Tech partners with local businesses to solve this.
                 </div>
                 <div class="stats-grid">
                     <div class="stat-box">
@@ -379,36 +379,36 @@ const path = require('path');
         </head>
         <body>
             <div class="page-header">
-                <h2>The eThanda Difference</h2>
+                <h2>The eT Tech Difference</h2>
             </div>
             <div class="page-content">
                 <div class="compare-box">
                     <div class="before">
-                        <div class="compare-title">❌ Before eThanda</div>
+                        <div class="compare-title">❌ Before eT Tech</div>
                         <div class="compare-text">You are up on a ladder or under a sink. A customer calls, but you can't answer. They call the next guy on Google and you lose a $500 job.</div>
                     </div>
                     <div class="after">
-                        <div class="compare-title">✅ After eThanda</div>
+                        <div class="compare-title">✅ After eT Tech</div>
                         <div class="compare-text">You miss a call. Our system instantly texts the customer: "Sorry we missed you! How can we help?" They text back, and you secure the lead.</div>
                     </div>
                 </div>
                 <div class="compare-box">
                     <div class="before">
-                        <div class="compare-title">❌ Before eThanda</div>
+                        <div class="compare-title">❌ Before eT Tech</div>
                         <div class="compare-text">Your website was built in 2012. It looks bad on mobile, loads slowly, and Google hides it from local search results.</div>
                     </div>
                     <div class="after">
-                        <div class="compare-title">✅ After eThanda</div>
+                        <div class="compare-title">✅ After eT Tech</div>
                         <div class="compare-text">You have a gorgeous, blazing-fast website with a "Text Us" button. It ranks on Google and turns local traffic into paying customers.</div>
                     </div>
                 </div>
                 <div class="compare-box">
                     <div class="before">
-                        <div class="compare-title">❌ Before eThanda</div>
+                        <div class="compare-title">❌ Before eT Tech</div>
                         <div class="compare-text">You pay monthly for Mailchimp, Calendly, QuickBooks, Square, and a CRM, but none of them talk to each other.</div>
                     </div>
                     <div class="after">
-                        <div class="compare-title">✅ After eThanda</div>
+                        <div class="compare-title">✅ After eT Tech</div>
                         <div class="compare-text">We consolidate your software, saving you hundreds a month, and automate your workflow so everything runs smoothly.</div>
                     </div>
                 </div>

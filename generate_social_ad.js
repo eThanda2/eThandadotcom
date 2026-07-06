@@ -94,12 +94,15 @@ const path = require('path');
                     padding: 30px 60px;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    align-items: center; /* Vertically center items */
                     border-top: 5px solid #00f2fe;
                     box-sizing: border-box;
                 }
                 .cta-text-area {
                     text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
                 .call-text {
                     font-size: 30px;
@@ -119,18 +122,18 @@ const path = require('path');
                     color: #0ea5e9;
                 }
                 .qr-code {
-                    width: 160px;
-                    height: 160px;
+                    width: 150px;
+                    height: 150px;
                     border: 4px solid #1e1b4b;
                     border-radius: 10px;
                     padding: 5px;
                     background: white;
                 }
                 .qr-label {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 700;
                     color: #1e1b4b;
-                    margin-top: 5px;
+                    margin-top: 8px;
                     text-align: center;
                 }
             </style>

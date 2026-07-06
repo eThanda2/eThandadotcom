@@ -4,7 +4,7 @@ const path = require('path');
 
 (async () => {
     try {
-        console.log("Launching browser for Brochure...");
+        console.log("Launching browser for Marketing Kit...");
         const browser = await puppeteer.launch({ headless: "new" });
         const page = await browser.newPage();
         
@@ -38,9 +38,112 @@ const path = require('path');
                     flex-direction: column;
                     page-break-after: always;
                     position: relative;
+                    background: white;
                 }
-                
-                /* PAGE 1: COVER & VALUE PROP */
+
+                /* ---- PAGE 1: FLYER ---- */
+                .flyer-hero {
+                    background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
+                    color: white;
+                    padding: 60px 50px;
+                    text-align: center;
+                    position: relative;
+                }
+                .flyer-hero::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    width: 100%;
+                    height: 20px;
+                    background: #00f2fe;
+                }
+                .logo {
+                    width: 120px;
+                    margin-bottom: 20px;
+                    background: white;
+                    padding: 10px;
+                    border-radius: 12px;
+                }
+                .flyer-hero h1 {
+                    font-size: 48px;
+                    margin: 0;
+                    line-height: 1.1;
+                    font-weight: 800;
+                }
+                .highlight {
+                    color: #00f2fe;
+                }
+                .sub-hero {
+                    font-size: 22px;
+                    margin-top: 15px;
+                    font-weight: 300;
+                    opacity: 0.9;
+                }
+                .flyer-content {
+                    padding: 60px 50px;
+                    flex-grow: 1;
+                }
+                .pitch {
+                    font-size: 26px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    color: #1e1b4b;
+                }
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 30px;
+                }
+                .card {
+                    background: #f8fafc;
+                    padding: 25px;
+                    border-radius: 15px;
+                    border-left: 5px solid #00f2fe;
+                }
+                .card h3 {
+                    margin: 0 0 10px 0;
+                    font-size: 20px;
+                    color: #1e1b4b;
+                }
+                .card p {
+                    margin: 0;
+                    font-size: 15px;
+                    color: #475569;
+                    line-height: 1.5;
+                }
+                .flyer-footer {
+                    background: #f1f5f9;
+                    padding: 40px 50px;
+                    text-align: center;
+                    border-top: 2px solid #e2e8f0;
+                }
+                .flyer-footer h2 {
+                    margin: 0 0 15px 0;
+                    font-size: 32px;
+                    color: #1e1b4b;
+                }
+                .contact-box {
+                    background: #1e1b4b;
+                    color: white;
+                    display: inline-block;
+                    padding: 15px 40px;
+                    border-radius: 50px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+                .contact-box span {
+                    color: #00f2fe;
+                }
+                .website {
+                    font-size: 18px;
+                    color: #475569;
+                    font-weight: 600;
+                }
+
+                /* ---- PAGE 2: BROCHURE FRONT ---- */
                 .cover-hero {
                     background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
                     color: white;
@@ -48,21 +151,18 @@ const path = require('path');
                     text-align: center;
                     border-bottom: 15px solid #00f2fe;
                 }
-                .logo {
+                .cover-logo {
                     width: 140px;
                     margin-bottom: 30px;
                     background: white;
                     padding: 12px;
                     border-radius: 12px;
                 }
-                h1 {
+                .cover-hero h1 {
                     font-size: 56px;
                     margin: 0;
                     line-height: 1.1;
                     font-weight: 800;
-                }
-                .highlight {
-                    color: #00f2fe;
                 }
                 .cover-content {
                     padding: 60px 50px;
@@ -104,7 +204,7 @@ const path = require('path');
                     color: #1e1b4b;
                 }
                 
-                /* PAGE 2: BEFORE & AFTER / SERVICES */
+                /* ---- PAGE 3: BROCHURE BACK ---- */
                 .page-header {
                     background: #1e1b4b;
                     color: white;
@@ -151,7 +251,7 @@ const path = require('path');
                     line-height: 1.5;
                 }
                 
-                .footer {
+                .brochure-footer {
                     background: #0b1120;
                     color: white;
                     padding: 30px 50px;
@@ -170,10 +270,48 @@ const path = require('path');
             </style>
         </head>
         <body>
-            <!-- PAGE 1 -->
+            <!-- PAGE 1: FLYER -->
+            <div class="page">
+                <div class="flyer-hero">
+                    <img src="${logoDataUri}" class="logo" />
+                    <h1>Save Time. Get More Leads.<br><span class="highlight">Increase Revenue.</span></h1>
+                    <div class="sub-hero">We take over your entire tech stack so you can focus on running your business.</div>
+                </div>
+
+                <div class="flyer-content">
+                    <div class="pitch">Stop losing money to bad tech and messy spreadsheets.</div>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Custom Websites</h3>
+                            <p>Beautiful, blazing-fast websites designed to rank on Google and convert local visitors into paying customers. <strong>Starts at just $99.</strong></p>
+                        </div>
+                        <div class="card">
+                            <h3>Automated Follow-Ups</h3>
+                            <p>Never lose a lead to a missed call again. We set up systems that instantly text customers back while you are out on a job.</p>
+                        </div>
+                        <div class="card">
+                            <h3>E-Commerce & Shopify</h3>
+                            <p>Want to sell online? We build and manage high-converting digital storefronts that handle inventory and payments effortlessly.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Tech & Software Cleanup</h3>
+                            <p>Stop paying for 10 different apps. We audit your business, consolidate your software, and automate the boring tasks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flyer-footer">
+                    <h2>Ready to grow your business?</h2>
+                    <div class="contact-box">Call or Text: <span>(346) 382-5020</span></div>
+                    <div class="website">www.ethanda.com &nbsp;|&nbsp; contactus@ethanda.com</div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: BROCHURE P1 -->
             <div class="page">
                 <div class="cover-hero">
-                    <img src="${logoDataUri}" class="logo" />
+                    <img src="${logoDataUri}" class="cover-logo" />
                     <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
                 <div class="cover-content">
@@ -194,7 +332,7 @@ const path = require('path');
                 </div>
             </div>
             
-            <!-- PAGE 2 -->
+            <!-- PAGE 3: BROCHURE P2 -->
             <div class="page">
                 <div class="page-header">
                     <h2>The eT Tech Difference</h2>
@@ -236,7 +374,7 @@ const path = require('path');
 
                 </div>
                 
-                <div class="footer">
+                <div class="brochure-footer">
                     <div class="footer-text">Ready to completely upgrade your business?</div>
                     <div class="footer-contact">Call or Text: (346) 382-5020</div>
                     <div style="margin-top: 10px; color: #94a3b8;">www.ethanda.com &nbsp;|&nbsp; contactus@ethanda.com</div>
@@ -247,20 +385,20 @@ const path = require('path');
         `;
         
         console.log("Setting content...");
-        await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        await page.setContent(htmlContent, { waitUntil: 'domcontentloaded' });
         
-        console.log("Generating Brochure PDF...");
+        console.log("Generating Marketing Kit PDF...");
         await page.pdf({ 
-            path: 'eThanda_SMB_Brochure.pdf', 
+            path: 'eT_Tech_Marketing_Kit.pdf', 
             format: 'A4',
             printBackground: true,
             margin: { top: '0', right: '0', bottom: '0', left: '0' }
         });
 
         await browser.close();
-        console.log("Brochure PDF generated successfully!");
+        console.log("Marketing Kit PDF generated successfully!");
     } catch(err) {
-        console.error("Error generating Brochure:", err);
+        console.error("Error generating Marketing Kit:", err);
         process.exit(1);
     }
 })();
