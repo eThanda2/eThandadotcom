@@ -301,14 +301,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const data = new FormData(form);
       
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+        const formDataObj = Object.fromEntries(data.entries());
+        
+        try {
+          const formspreePromise = fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          const crmPromise = fetch('https://leads.ethanda.com/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formDataObj)
+          }).catch(err => console.error("CRM Sync failed", err));
+
+          const [response] = await Promise.all([formspreePromise, crmPromise]);
         
         if (response.ok) {
           let title = "Message Sent!";
