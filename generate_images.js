@@ -168,6 +168,7 @@ const path = require('path');
             <!-- Global Bar -->
             <div class="global-bar">
                 <span>www.ethanda.com</span>
+                <span>eT Tech</span>
                 <span>(346) 382-5020</span>
             </div>
         </body>
@@ -296,6 +297,7 @@ const path = require('path');
             <!-- Global Bar -->
             <div class="global-bar">
                 <span>www.ethanda.com</span>
+                <span>eT Tech</span>
                 <span>(346) 382-5020</span>
             </div>
         </body>
@@ -435,6 +437,7 @@ const path = require('path');
             <!-- Global Bar -->
             <div class="global-bar">
                 <span>www.ethanda.com</span>
+                <span>eT Tech</span>
                 <span>(346) 382-5020</span>
             </div>
         </body>
