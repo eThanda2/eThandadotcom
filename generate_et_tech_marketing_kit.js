@@ -99,7 +99,7 @@ const path = require('path');
                     opacity: 0.9;
                 }
                 .flyer-content {
-                    padding: 60px 50px;
+                    padding: 40px 50px;
                     flex-grow: 1;
                 }
                 .pitch {
@@ -133,7 +133,7 @@ const path = require('path');
                 }
                 .flyer-footer {
                     background: #f1f5f9;
-                    padding: 40px 50px;
+                    padding: 20px 50px;
                     text-align: center;
                     border-top: 2px solid #e2e8f0;
                 }

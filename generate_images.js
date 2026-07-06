@@ -37,10 +37,10 @@ const path = require('path');
                     display: flex;
                     flex-direction: column;
                 }
-                .hero {
+                .flyer-hero {
                     background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
                     color: white;
-                    padding: 90px 75px;
+                    padding: 40px 75px;
                     text-align: center;
                     position: relative;
                 }
@@ -75,8 +75,8 @@ const path = require('path');
                     font-weight: 300;
                     opacity: 0.9;
                 }
-                .content {
-                    padding: 90px 75px;
+                .flyer-content {
+                    padding: 40px 75px;
                     flex-grow: 1;
                 }
                 .pitch {
@@ -110,7 +110,7 @@ const path = require('path');
                 }
                 .flyer-footer {
                     background: #f1f5f9;
-                    padding: 60px 75px;
+                    padding: 20px 75px;
                     text-align: center;
                     border-top: 2px solid #e2e8f0;
                 }
@@ -131,13 +131,13 @@ const path = require('path');
             </style>
         </head>
         <body>
-            <div class="hero">
+            <div class="flyer-hero">
                 <img src="${logoDataUri}" class="logo" />
                 <h1>Save Time. Get More Leads.<br><span class="highlight">Increase Revenue.</span></h1>
                 <div class="sub-hero">We take over your entire tech stack so you can focus on running your business.</div>
             </div>
 
-            <div class="content">
+            <div class="flyer-content">
                 <div class="pitch">Stop losing money to bad tech and messy spreadsheets.</div>
                 
                 <div class="grid">
