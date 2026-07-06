@@ -34,7 +34,8 @@ const path = require('path');
                     box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
+                    padding-top: 70px;
                     align-items: center;
                     text-align: center;
                     position: relative;
@@ -152,19 +153,19 @@ const path = require('path');
             <div class="services-grid">
                 <div class="service-box">
                     <div class="service-title">🌐 Custom Websites</div>
-                    <div class="service-desc">Gorgeous, fast sites starting at just $99.</div>
+                    <div class="service-desc">Gorgeous, fast sites. <br><span style="color: #fbbf24; font-weight: 800; font-size: 26px; display: inline-block; margin-top: 5px;">Starting at just $99</span></div>
                 </div>
                 <div class="service-box">
                     <div class="service-title">📱 Automated Follow-Ups</div>
-                    <div class="service-desc">Instantly text back missed calls. Secure every lead.</div>
+                    <div class="service-desc">Instantly text back missed calls. <br>Secure every single lead.</div>
                 </div>
                 <div class="service-box">
                     <div class="service-title">🛒 E-Commerce</div>
-                    <div class="service-desc">High-converting digital storefronts.</div>
+                    <div class="service-desc">High-converting digital storefronts.<br>Sell online effortlessly.</div>
                 </div>
                 <div class="service-box">
                     <div class="service-title">⚙️ Tech Cleanup</div>
-                    <div class="service-desc">Audit, consolidate, and automate your workflow.</div>
+                    <div class="service-desc">Audit, consolidate, and automate <br>your entire workflow.</div>
                 </div>
             </div>
             
