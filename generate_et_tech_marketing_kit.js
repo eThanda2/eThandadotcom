@@ -26,14 +26,13 @@ const path = require('path');
                     padding: 0;
                     background: #fff;
                     color: #0b1120;
-                    width: 794px; /* A4 Width */
-                    height: 1123px; /* A4 Height */
                     box-sizing: border-box;
                     position: relative;
                 }
                 .page {
-                    width: 100%;
-                    height: 100%;
+                    width: 794px;
+                    height: 1123px;
+                    max-height: 1123px;
                     display: flex;
                     flex-direction: column;
                     page-break-after: always;
@@ -41,6 +40,7 @@ const path = require('path');
                     background: white;
                     padding-bottom: 60px; /* Room for global bar */
                     box-sizing: border-box;
+                    overflow: hidden;
                 }
                 .global-bar {
                     position: absolute;
