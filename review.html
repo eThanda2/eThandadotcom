@@ -258,15 +258,14 @@
         
         const formData = new FormData(form);
         const data = {
-          name: formData.get('name') || formData.get('fullName') || 'Unknown',
-          email: formData.get('email') || formData.get('_replyto') || 'Unknown',
-          phone: formData.get('phone') || formData.get('contact') || '',
-          message: formData.get('message') || '',
-          source: window.location.pathname || 'Website Contact Form'
+          name: formData.get('name') || 'Anonymous',
+          company: formData.get('company') || '',
+          rating: formData.get('rating') || '5',
+          review: formData.get('review') || ''
         };
         
-        // 1. Send to CRM
-        fetch('https://leads.ethanda.com/api/leads', {
+        // 1. Send to CRM Reviews API
+        fetch('https://leads.ethanda.com/api/reviews', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)

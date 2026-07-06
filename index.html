@@ -344,47 +344,56 @@
       <h2 style="color: var(--text-primary); margin-top: 1rem;">What Our Clients Say</h2>
     </div>
     
-    <div class="services-grid" style="gap: 1.5rem;">
-      <!-- Review 1 -->
-      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
-        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-        </div>
-        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"eT Tech saved us hundreds of hours a month by automating our messy spreadsheets into a clean web portal. They actually understood what we needed as a growing business."</p>
-        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
-          <h4 style="color: var(--text-primary); font-size: 1rem;">Sarah Jenkins</h4>
-          <p style="color: var(--text-muted); font-size: 0.85rem;">Local Retail Co.</p>
-        </div>
-      </div>
-      
-      <!-- Review 2 -->
-      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
-        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-        </div>
-        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"The Lowest Price Guarantee is real. They built us a custom e-commerce solution for half the price the big agencies quoted us. Highly recommend them."</p>
-        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
-          <h4 style="color: var(--text-primary); font-size: 1rem;">Michael Chen</h4>
-          <p style="color: var(--text-muted); font-size: 0.85rem;">Startup Founder</p>
-        </div>
-      </div>
-      
-      <!-- Review 3 -->
-      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
-        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-        </div>
-        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"Finally an IT firm that doesn't bombard you with confusing jargon. They spoke my language, set up our cloud infrastructure, and got out of our way."</p>
-        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
-          <h4 style="color: var(--text-primary); font-size: 1rem;">David Rodriguez</h4>
-          <p style="color: var(--text-muted); font-size: 0.85rem;">Accounting Partners</p>
-        </div>
+    <div class="services-grid" id="reviews-container" style="gap: 1.5rem;">
+      <div style="text-align: center; width: 100%; color: var(--text-secondary); padding: 2rem;">
+        Loading reviews...
       </div>
     </div>
     
     <div style="text-align: center; margin-top: 3rem;">
       <a href="review.html" class="btn btn-secondary">Leave a Review</a>
     </div>
+
+    <!-- Dynamic Reviews Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('https://leads.ethanda.com/api/reviews')
+          .then(response => response.json())
+          .then(data => {
+            const container = document.getElementById('reviews-container');
+            if (data.success && data.reviews && data.reviews.length > 0) {
+              container.innerHTML = '';
+              // Only show up to 3 reviews on the homepage for design consistency
+              const reviewsToShow = data.reviews.slice(0, 3);
+              
+              reviewsToShow.forEach(review => {
+                const starsHtml = '<i class="fa-solid fa-star"></i>'.repeat(review.rating) + 
+                                  '<i class="fa-regular fa-star" style="color: #e2e8f0;"></i>'.repeat(5 - review.rating);
+                
+                const reviewHtml = `
+                  <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
+                    <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
+                      ${starsHtml}
+                    </div>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"${review.review_text}"</p>
+                    <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+                      <h4 style="color: var(--text-primary); font-size: 1rem;">${review.name}</h4>
+                      <p style="color: var(--text-muted); font-size: 0.85rem;">${review.company || 'Customer'}</p>
+                    </div>
+                  </div>
+                `;
+                container.innerHTML += reviewHtml;
+              });
+            } else {
+              container.innerHTML = '<div style="text-align: center; width: 100%; color: var(--text-secondary);">Be the first to leave a review!</div>';
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching reviews:', error);
+            document.getElementById('reviews-container').innerHTML = '<div style="text-align: center; width: 100%; color: var(--text-secondary);">Unable to load reviews at this time.</div>';
+          });
+      });
+    </script>
   </section>
 
   <!-- ==========================================
