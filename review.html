@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review – eThanda Technologies</title>
+  <meta name="description" content="Share your experience working with eThanda Technologies.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .review-form-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 3rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-family: inherit;
+      background: #f8fafc;
+      transition: all 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(0, 98, 204, 0.1);
+    }
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      cursor: pointer;
+      font-size: 2rem;
+      color: #e2e8f0;
+      transition: color 0.2s;
+    }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input:checked ~ label {
+      color: #F59E0B;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <link rel="canonical" href="https://www.ethanda.com/review.html">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <a class='logo' href='/'>
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
+        <span style="color: var(--text-primary);">eThanda Technologies</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div style="padding: 120px 2rem 5rem; background: var(--bg-primary); min-height: 100vh;">
+    <div class="review-form-container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">How did we do?</h1>
+        <p style="color: var(--text-secondary);">Your feedback helps us serve small businesses better.</p>
+      </div>
+
+      <!-- Update the action URL to your Formspree endpoint -->
+      <form action="https://formspree.io/f/mkolykgy" method="POST">
+        
+        <div class="form-group">
+          <label>Overall Rating</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required />
+            <label for="star5" title="5 stars"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star"><i class="fa-solid fa-star"></i></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" placeholder="e.g. Local Retail Co.">
+        </div>
+
+        <div class="form-group">
+          <label for="review">Your Review</label>
+          <textarea id="review" name="review" rows="5" required placeholder="Tell us about your experience..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <footer style="background: #fff; padding: 2rem; border-top: 1px solid rgba(0,0,0,0.05); text-align: center;">
+    <p style="color: var(--text-secondary);">&copy; 2026 eThanda Technologies. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

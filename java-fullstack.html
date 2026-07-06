@@ -7,6 +7,8 @@
   <meta name="description" content="Custom Java Full Stack software engineering. Expertise in Spring Boot microservices, Angular/React UI, AWS cloud deployments, and CI/CD.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/java-fullstack.html">
 </head>
 <body style="background: var(--bg-primary);">
 
@@ -14,18 +16,26 @@
   <header style="background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05);">
     <div class="nav-container">
             <a href="index.html" class="logo" style="font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: -0.5px;">
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="global-offices.html">Global Offices</a></li>
-          <li><a href="consulting.html">Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -61,7 +71,7 @@
           </ul>
         </div>
         <div style="background: rgba(0,0,0,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); text-align: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png" alt="Spring Boot Architecture" style="max-height: 80px; margin: 0 auto 1.5rem;">
+          <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png" alt="Spring Boot Architecture" style="max-height: 80px; margin: 0 auto 1.5rem;" loading="lazy">
           <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Scalable Backend</h4>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">Stateless Spring Boot services optimized for containerized environments.</p>
         </div>

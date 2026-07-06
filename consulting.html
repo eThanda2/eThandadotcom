@@ -7,6 +7,8 @@
   <meta name="description" content="Explore eThanda Technologies' core IT consulting services: IBM i Modernization, MIMIX High Availability, and Java Full Stack Engineering.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/consulting.html">
 </head>
 <body style="background: var(--bg-primary);">
 
@@ -14,18 +16,26 @@
   <header style="background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05);">
     <div class="nav-container">
             <a href="index.html" class="logo" style="font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: -0.5px;">
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="global-offices.html">Global Offices</a></li>
-          <li><a href="consulting.html">Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -91,7 +101,7 @@
       <!-- Service 4: X-Analysis -->
       <div class="detail-card glass-panel" style="background: #fff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
         <div class="card-icon" style="background: rgba(0, 98, 204, 0.05); color: var(--accent-cyan); border: none; padding: 0;">
-          <img src="x-analysis-logo.png" alt="X-Analysis Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;">
+          <img  src="x-analysis-logo.png" alt="X-Analysis Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;" loading="lazy">
         </div>
         <h3 style="color: var(--text-primary);">X-Analysis Integration</h3>
         <p style="color: var(--text-secondary);">Ground-up installation and configuration of Fresche X-Analysis. We rapidly document undocumented systems, build relational data models, and extract critical business rules automatically.</p>
@@ -106,7 +116,7 @@
       <!-- Service 5: MKS Implementer -->
       <div class="detail-card glass-panel" style="background: #fff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
         <div class="card-icon" style="background: rgba(0, 98, 204, 0.05); color: var(--accent-cyan); border: none; padding: 0;">
-          <img src="mks-logo.png" alt="MKS Implementer Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;">
+          <img  src="mks-logo.png" alt="MKS Implementer Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;" loading="lazy">
         </div>
         <h3 style="color: var(--text-primary);">MKS Implementer DevOps</h3>
         <p style="color: var(--text-secondary);">Enterprise-grade configuration of PTC MKS Implementer from scratch. We establish strict Agile/Scrum compliant promotion cycles, separation of duties, and fully automated release management.</p>

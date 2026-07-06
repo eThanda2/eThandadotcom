@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eThanda Technologies – Enterprise IT Consulting</title>
+  <title>eThanda Technologies | AS400 Consulting & Small Business Tech Audits</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Leverage the deep technical expertise of eThanda Technologies for AS400 Modernization, MIMIX High Availability, and robust Java Full Stack development.">
+  <meta name="description" content="eThanda Technologies delivers enterprise AS400 modernization and provides affordable tech audits, AI implementation, and workflow automation for small businesses.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="eThanda Technologies – Bridging Legacy and Cloud">
-  <meta property="og:description" content="Decades of expertise in AS400/IBM i modernization, MIMIX data replication, and modern Java full stack engineering.">
+  <meta property="og:title" content="Save Time & Get More Leads | eThanda Technologies">
+  <meta property="og:description" content="We handle the entire tech stack for growing businesses. Custom websites, lead generation tools, and automation.">
   <meta property="og:image" content="logo.png">
   <meta property="og:type" content="website">
 
@@ -19,6 +19,8 @@
   
   <!-- FontAwesome Icons for modern symbols -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/">
 </head>
 <body>
 
@@ -28,18 +30,26 @@
   <header>
     <div class="nav-container">
             <a href="index.html" class="logo" style="font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: -0.5px;">
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="global-offices.html">Global Offices</a></li>
-          <li><a href="consulting.html">Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
         </ul>
       </nav>
       
@@ -57,97 +67,120 @@
   <section class="hero-section">
     <div class="hero-grid">
       <div class="hero-content">
-        <span class="section-tag" style="background: rgba(0,0,0,0.05); padding: 5px 12px; border-radius: 20px; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Enterprise Transformation</span>
-        <h1 style="color: var(--text-primary); margin-top: 1rem;">Supporting Your <br><span class="gradient-text">Existing Applications</span></h1>
-        <p style="color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 580px; font-size: 1.1rem; line-height: 1.7;">If your organization is dealing with critical resources retiring, we step in to solve problems and maintain your existing applications. When you are ready to retire legacy systems, we provide the deep industry experience required to guide you seamlessly through the transition.</p>
-        <div class="hero-actions">
-          <a href="ibm-i-modernization.html" class="btn btn-primary">IBM i Modernization <i class="fa-solid fa-arrow-right" style="margin-left: 0.75rem;"></i></a>
-          <a href="consulting.html" class="btn btn-secondary">View All Services</a>
-        </div>
+        <span class="section-tag" style="background: rgba(168,85,247,0.1); padding: 5px 12px; border-radius: 20px; color: var(--accent-purple); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;"><i class="fa-solid fa-certificate"></i> Proudly Women-Owned Business</span>
+        <h1 style="color: var(--text-primary); margin-top: 1rem; font-size: 3.5rem;">Save Time, Get More Leads, & <br><span class="gradient-text">Increase Revenue</span></h1>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 650px; font-size: 1.15rem; line-height: 1.7;">Our primary focus is helping your small business grow. We will work directly with you to build professional websites, automate daily tasks, and setup tools that actually generate leads.</p>
+        
+        <ul style="list-style: none; margin-bottom: 0; color: var(--text-primary); display: flex; flex-direction: column; gap: 1rem; font-size: 1.1rem;">
+          <li><i class="fa-solid fa-shop" style="color: var(--accent-cyan); margin-right: 12px; width: 24px;"></i> <strong>E-Commerce & Shopify Setup</strong> - Beautiful stores to sell your custom products</li>
+          <li><i class="fa-solid fa-laptop-code" style="color: var(--accent-cyan); margin-right: 12px; width: 24px;"></i> <strong>Small Business Websites <span style="background: rgba(168,85,247,0.15); color: var(--accent-purple); padding: 2px 8px; border-radius: 12px; font-size: 0.9em; margin-left: 6px;">Starts at $99</span></strong> - Get your local brand on the map</li>
+          <li><i class="fa-solid fa-gears" style="color: var(--accent-cyan); margin-right: 12px; width: 24px;"></i> <strong>Workflow Automation</strong> - Ditch the messy spreadsheets</li>
+          <li><i class="fa-solid fa-microchip" style="color: var(--accent-cyan); margin-right: 12px; width: 24px;"></i> <strong><a href="tech-audit.html" style="color: var(--text-primary); text-decoration: none;">AI & Tech Audits <i class="fa-solid fa-arrow-right" style="font-size: 0.8em; margin-left: 5px; color: var(--accent-cyan);"></i></a></strong> - We analyze your tools and recommend AI for maximum ROI</li>
+          <li><i class="fa-solid fa-tag" style="color: var(--accent-cyan); margin-right: 12px; width: 24px;"></i> <strong>Lowest Price Guarantee</strong> - Professional tech you can afford</li>
+        </ul>
       </div>
-      <div class="hero-visual">
-        <div class="visual-sphere"></div>
-        <img src="logo.png" alt="eThanda Technologies" class="visual-logo">
+      
+      <div class="glass-panel" style="padding: 2.5rem; background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Get a Free Estimate</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Tell us what you need. We'll reply with a quote within 24 hours.</p>
+        <form action="https://formspree.io/f/mkolykgy" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 500;">Name or Business Name *</label>
+            <input type="text" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc;" placeholder="Jane Doe / Retail Co.">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 500;">Email *</label>
+            <input type="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc;" placeholder="jane@example.com">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 500;">Phone Number (Optional)</label>
+            <div style="display: flex; gap: 0.5rem;">
+              <span style="display: flex; align-items: center; justify-content: center; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc; color: var(--text-secondary); width: 90px; font-weight: 500;">🇺🇸 +1</span>
+              <input type="hidden" name="countryCode" value="+1">
+              <input type="tel" name="phone" style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc;" placeholder="(555) 000-0000">
+            </div>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 500;">What do you need? *</label>
+            <select name="service" style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc; color: var(--text-primary);">
+              <option>New Small Business Website</option>
+              <option>E-Commerce & Shopify Setup</option>
+              <option>Software Cleanup / Cost Cutting</option>
+              <option>Automated Customer Follow-ups</option>
+              <option>Custom Tracking App / AI Assistant</option>
+              <option>Other / I just need help</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 500;">Additional Details (Optional)</label>
+            <textarea name="message" rows="3" style="width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; resize: vertical;" placeholder="Tell us a little more about your business..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Request Quote <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i></button>
+        </form>
+        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.05);">
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">Need immediate assistance? Feel free to call or text us at <strong>(346) 382-5020</strong>.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================
-       PARTNERS CAROUSEL (LOGO MARQUEE)
+       EMPATHY & VALUE PROP SECTION
        ========================================== -->
-  <div class="partners-section" style="background: rgba(0,0,0,0.02);">
-    <div class="partners-title">DEEP EXPERTISE IN CORE ENTERPRISE TECHNOLOGIES</div>
-    <div class="marquee-container">
-      <div class="marquee-content" style="color: var(--text-primary); font-weight: 600;">
-        <span>IBM i Series</span>
-        <span>MIMIX</span>
-        <span>ASNA Monarch</span>
-        <span>Java 17</span>
-        <span>Spring Boot</span>
-        <span>Angular</span>
-        <span>RPG ILE</span>
-        <span>AWS Cloud</span>
-        <span>GoAnywhere</span>
-        <span>Mulesoft</span>
-        <span>X-Analysis</span>
-        <span>SYNON</span>
-        <!-- Duplicate for infinite scroll loop -->
-        <span>IBM i Series</span>
-        <span>MIMIX</span>
-        <span>ASNA Monarch</span>
-        <span>Java 17</span>
-        <span>Spring Boot</span>
-        <span>Angular</span>
-        <span>RPG ILE</span>
-        <span>AWS Cloud</span>
-        <span>GoAnywhere</span>
-        <span>Mulesoft</span>
-        <span>X-Analysis</span>
-        <span>SYNON</span>
+  <section class="why-section" style="background: rgba(0,0,0,0.02); padding: 4rem 0;">
+    <div class="hero-grid">
+      <div style="padding: 2rem;">
+        <h2 style="color: var(--text-primary); margin-bottom: 1rem;">We've Been In Your Shoes</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7;">As a women-owned enterprise, we know that small businesses can't afford endless IT consulting fees or projects that drag on for months.</p>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">We offer fixed, predictable pricing to automate your messy spreadsheets, build your custom customer portals, and get your business scaling online—backed by our <strong>Lowest Price Guarantee</strong>.</p>
+      </div>
+      <div class="stat-card glass-panel" style="background: #fff; margin: auto; text-align: center; padding: 3rem;">
+        <i class="fa-solid fa-handshake-angle" style="font-size: 3rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+        <h3 style="color: var(--text-primary);">Lowest Price Guarantee</h3>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">Enterprise-grade engineering at small business prices. If you find a lower quote, we will beat it.</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ==========================================
        SERVICES HIGHLIGHTS
        ========================================== -->
   <section class="services-highlight" id="services">
-    <span class="section-tag">Enterprise Excellence</span>
-    <h2>Our Core IT Solutions</h2>
-    <p class="subtitle" style="margin: 0.5rem auto 0; color: var(--text-secondary);">We offer specialized IT consulting services that bridge the gap between reliable legacy systems and modern cloud architectures.</p>
+    <span class="section-tag">SMB Solutions</span>
+    <h2>How We Help Growing Businesses</h2>
+    <p class="subtitle" style="margin: 0.5rem auto 0; color: var(--text-secondary);">Affordable, custom-tailored technology solutions to help your business run faster, smoother, and more securely.</p>
     
     <div class="services-grid">
       <!-- Card 1 -->
       <div class="service-card glass-panel" style="background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
         <div class="card-icon" style="background: rgba(0, 98, 204, 0.05); color: var(--accent-cyan); border: none;">
-          <i class="fa-solid fa-server"></i>
+          <i class="fa-solid fa-laptop-code"></i>
         </div>
-        <h3 style="color: var(--text-primary);">IBM i (AS400) Modernization</h3>
-        <p style="color: var(--text-secondary);">Transform your legacy IBM i environment into a future-ready, API-driven architecture. We offer complete lifecycle modernization: converting fixed-format RPG and CL to Free-Format ILE, transforming 5250 green screens into responsive web apps via ASNA Monarch, and managing secure EDI/MFT transfers via GoAnywhere.</p>
-        <a href="ibm-i-modernization.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
+        <h3 style="color: var(--text-primary);">Websites & E-Commerce</h3>
+        <p style="color: var(--text-secondary);">We build, launch, and manage your website and online store. You don't have to worry about hosting, updates, or making changes—we handle it all.</p>
+        <a href="smb-services.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
       </div>
       
       <!-- Card 2 -->
       <div class="service-card glass-panel" style="background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
         <div class="card-icon" style="background: rgba(0, 98, 204, 0.05); color: var(--accent-cyan); border: none;">
-          <i class="fa-solid fa-shield-halved"></i>
+          <i class="fa-solid fa-layer-group"></i>
         </div>
-        <h3 style="color: var(--text-primary);">MIMIX HA & DR</h3>
-        <p style="color: var(--text-secondary);">Ensure absolute business continuity with our certified MIMIX high availability and disaster recovery services. We architect complex multi-LPAR replication, manage failover testing, and secure production synchronization.</p>
-        <a href="mimix-ha-dr.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
+        <h3 style="color: var(--text-primary);">Tech Stack Management</h3>
+        <p style="color: var(--text-secondary);">Stop paying for 10 different software subscriptions that don't talk to each other. We clean up your tools, integrate them, and save you money.</p>
+        <a href="smb-services.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
       </div>
       
       <!-- Card 3 -->
       <div class="service-card glass-panel" style="background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
         <div class="card-icon" style="background: rgba(0, 98, 204, 0.05); color: var(--accent-cyan); border: none;">
-          <i class="fa-solid fa-laptop-code"></i>
+          <i class="fa-solid fa-comment-sms"></i>
         </div>
-        <h3 style="color: var(--text-primary);">Java Full Stack Engineering</h3>
-        <p style="color: var(--text-secondary);">Full lifecycle software engineering using Java (8-17), Spring Boot microservices, and modern UI frameworks like Angular and React, deployed seamlessly on AWS.</p>
-        <a href="java-fullstack.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
+        <h3 style="color: var(--text-primary);">Business Automation & AI</h3>
+        <p style="color: var(--text-secondary);">We set up automated customer follow-ups and AI website assistants so you never lose a lead while you are out on a job or asleep.</p>
+        <a href="smb-services.html" class="card-link" style="color: var(--accent-cyan);">Deep Dive <span><i class="fa-solid fa-chevron-right"></i></span></a>
       </div>
-    </div>
-  </section>
+    </div>\n  </section>
 
   <!-- ==========================================
        WHY ETHANDA SECTION
@@ -185,6 +218,58 @@
   </section>
 
   <!-- ==========================================
+       CUSTOMER REVIEWS
+       ========================================== -->
+  <section class="reviews-section" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-tag" style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase;">Real Partnerships</span>
+      <h2 style="color: var(--text-primary); margin-top: 1rem;">What Our Clients Say</h2>
+    </div>
+    
+    <div class="services-grid" style="gap: 1.5rem;">
+      <!-- Review 1 -->
+      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
+        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"eThanda saved us hundreds of hours a month by automating our messy spreadsheets into a clean web portal. They actually understood what we needed as a growing business."</p>
+        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+          <h4 style="color: var(--text-primary); font-size: 1rem;">Sarah Jenkins</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Local Retail Co.</p>
+        </div>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
+        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"The Lowest Price Guarantee is real. They built us a custom e-commerce solution for half the price the big agencies quoted us. Highly recommend them."</p>
+        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+          <h4 style="color: var(--text-primary); font-size: 1rem;">Michael Chen</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Startup Founder</p>
+        </div>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="glass-panel" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; background: #fff; border-color: rgba(0,0,0,0.05);">
+        <div style="color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; flex-grow: 1;">"Finally an IT firm that doesn't bombard you with confusing jargon. They spoke my language, set up our cloud infrastructure, and got out of our way."</p>
+        <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+          <h4 style="color: var(--text-primary); font-size: 1rem;">David Rodriguez</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Accounting Partners</p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="review.html" class="btn btn-secondary">Leave a Review</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
        CALL TO ACTION
        ========================================== -->
   <section style="padding-top: 2rem; padding-bottom: 6rem;">
@@ -203,7 +288,7 @@
     <div class="nav-container" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem;">
       <div class="footer-brand">
         <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
-          <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+          <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
           <span>eThanda Technologies</span>
         </a>
         <p style="color: var(--text-secondary);">Providing cutting-edge IBM i Modernization, MIMIX Support, and Full Stack Java software solutions globally.</p>

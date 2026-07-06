@@ -7,6 +7,8 @@
   <meta name="description" content="Discover our corporate vision, leadership team, the Zulu meaning behind eThanda, and our international delivery offices.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/corporate.html">
 </head>
 <body>
 
@@ -16,18 +18,26 @@
   <header>
     <div class="nav-container">
       <a class='logo' href='/' style='font-family: \'Cinzel\', serif; font-weight: 800; letter-spacing: -0.5px;'>
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
-          <li><a href='/'>Home</a></li>
-          <li><a href='/corporate'>Corporate</a></li>
-          <li><a href='/global-offices'>Global Offices</a></li>
-          <li><a href='/consulting'>Services</a></li>
-          <li><a href='/careers'>Careers</a></li>
-          <li><a href='/contact'>Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
         </ul>
       </nav>
       
@@ -60,9 +70,9 @@
 
   <section id="leadership" style="padding-top: 3rem;">
     <div style="text-align: center; margin-bottom: 4rem;">
-      <span class="section-tag">Executive Vision</span>
+      <span class="section-tag" style="background: rgba(168,85,247,0.1); color: var(--accent-purple); padding: 5px 12px; border-radius: 20px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;"><i class="fa-solid fa-certificate"></i> Women-Led Enterprise</span>
       <h2>Our Leadership Team</h2>
-      <p class="subtitle" style="margin: 0.5rem auto 0; max-width: 800px;">At eThanda Technologies, we advocate for clean, efficient, and objective-driven technology solutions, led by decades of hands-on engineering experience.</p>
+      <p class="subtitle" style="margin: 0.5rem auto 0; max-width: 800px;">As a proud women-owned business, we advocate for clean, efficient, and objective-driven technology solutions. We know the struggles of growing a small business, which is why our leadership is dedicated to making enterprise-grade engineering accessible and affordable.</p>
     </div>
 
     <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
@@ -113,7 +123,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class='logo' href='/'>
-          <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+          <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
           <span>eThanda Technologies</span>
         </a>
         <p>Providing cutting-edge AS400 Modernization, MIMIX Support, and Full Stack Java software solutions globally.</p>
@@ -125,7 +135,9 @@
           <li><a href='/corporate#leadership'>Leadership Team</a></li>
 
           <li><a href='/global-offices'>Global Offices</a></li>
-          <li><a href='/consulting'>Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
+          <li><a href="training.html">Training</a></li>
           <li><a href='/careers'>Careers</a></li>
           <li><a href='/contact'>Contact Us</a></li>
         </ul>

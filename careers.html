@@ -7,6 +7,8 @@
   <meta name="description" content="Discover open career positions at eThanda Technologies, including AS400 RPG Developer, MIMIX Administrator, and Java Full Stack Engineer roles.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/careers.html">
 </head>
 <body>
 
@@ -16,18 +18,26 @@
   <header>
     <div class="nav-container">
             <a href="index.html" class="logo" style="font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: -0.5px;">
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="global-offices.html">Global Offices</a></li>
-          <li><a href="consulting.html">Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+          </li>
         </ul>
       </nav>
       
@@ -144,25 +154,25 @@
       <span class="section-tag">Talent Acquisition</span>
       <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Join the eThanda Technologies Team</h3>
       
-      <form id="applicationForm">
+      <form action="https://formspree.io/f/mkolykgy" method="POST" id="applicationForm">
         <div class="form-group">
           <label for="jobTitleInput">Applying For</label>
-          <input type="text" id="jobTitleInput" class="form-control" style="background: rgba(0, 0, 0, 0.05); font-weight: 600; color: var(--accent-cyan);" readonly>
+          <input type="text" id="jobTitleInput" name="job_title" class="form-control" style="background: rgba(0, 0, 0, 0.05); font-weight: 600; color: var(--accent-cyan);" readonly>
         </div>
         
         <div class="form-group">
           <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
+          <input type="text" id="fullName" name="name" class="form-control" placeholder="John Doe" required>
         </div>
         
         <div class="form-group">
           <label for="emailAddress">Email Address</label>
-          <input type="email" id="emailAddress" class="form-control" placeholder="john@example.com" required>
+          <input type="email" id="emailAddress" name="email" class="form-control" placeholder="john@example.com" required>
         </div>
         
         <div class="form-group">
           <label for="telNumber">Telephone Number</label>
-          <input type="tel" id="telNumber" class="form-control" placeholder="+1 (555) 000-0000" required>
+          <input type="tel" id="telNumber" name="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
         </div>
         
         <div class="form-group">
@@ -182,7 +192,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+          <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
           <span>eThanda Technologies</span>
         </a>
         <p>Providing cutting-edge AS400 Modernization, MIMIX Support, and Full Stack Java software solutions globally.</p>

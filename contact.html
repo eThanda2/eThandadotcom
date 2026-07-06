@@ -7,6 +7,13 @@
   <meta name="description" content="Reach out to eThanda Technologies for AS400 modernization assessments, MIMIX health checks, or Java Full Stack development inquiries.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="canonical" href="https://www.ethanda.com/contact.html">
+
+  <meta property="og:title" content="Save Time & Get More Leads | eThanda Technologies">
+  <meta property="og:description" content="We handle the entire tech stack for growing businesses. Custom websites, lead generation tools, and automation.">
+  <meta property="og:image" content="https://www.ethanda.com/logo.png">
+  <meta property="og:type" content="website">
 </head>
 <body>
 
@@ -16,18 +23,24 @@
   <header>
     <div class="nav-container">
             <a href="index.html" class="logo" style="font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: -0.5px;">
-        <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+        <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
         <span style="color: var(--text-primary);">eThanda Technologies</span>
       </a>
       
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="global-offices.html">Global Offices</a></li>
-          <li><a href="consulting.html">Services</a></li>
+          <li><a href="index.html#services">Small Business</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="consulting.html">Enterprise</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a style="cursor: pointer;">Corporate <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="corporate.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       
@@ -58,10 +71,10 @@
         <span class="section-tag">Inquiry Form</span>
         <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Request an Assessment</h3>
         
-        <form id="contactForm">
+        <form action="https://formspree.io/f/mkolykgy" method="POST" id="contactForm">
           <div class="form-group">
-            <label for="contactName">Full Name</label>
-            <input type="text" id="contactName" class="form-control" placeholder="Enter your full name" required>
+            <label for="contactName">Name or Business Name</label>
+            <input type="text" id="contactName" name="name" class="form-control" placeholder="Enter your name or business name" required>
           </div>
           
           <div class="form-group">
@@ -71,7 +84,7 @@
           
           <div class="form-group">
             <label for="contactSubject">Subject</label>
-            <select id="contactSubject" class="form-control" required style="background: rgba(0, 0, 0, 0.05); color: var(--text-primary);">
+            <select id="contactSubject" name="subject" class="form-control" required style="background: rgba(0, 0, 0, 0.05); color: var(--text-primary);">
               <option value="" disabled selected>Select an Inquiry Type...</option>
               <option value="AS400 Modernization">AS400 Modernization & Code Review</option>
               <option value="MIMIX HA/DR">MIMIX HA/DR Setup & Support</option>
@@ -83,7 +96,7 @@
           
           <div class="form-group">
             <label for="contactMessage">Your Message</label>
-            <textarea id="contactMessage" class="form-control" placeholder="Outline your infrastructure requirements or project details..." required></textarea>
+            <textarea id="contactMessage" name="message" class="form-control" placeholder="Outline your infrastructure requirements or project details..." required></textarea>
           </div>
           
           <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px; margin-top: 1rem;">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.75rem;"></i></button>
@@ -138,7 +151,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logo.png" alt="eThanda Technologies Logo" class="logo-img">
+          <img  src="logo.png" alt="eThanda Technologies Logo" class="logo-img" loading="lazy">
           <span>eThanda Technologies</span>
         </a>
         <p>Providing cutting-edge AS400 Modernization, MIMIX Support, and Full Stack Java software solutions globally.</p>

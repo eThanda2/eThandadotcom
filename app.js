@@ -280,3 +280,149 @@ function highlightActiveLink() {
     }
   });
 }
+
+
+/* ==========================================
+   FORMSPREE AJAX SUBMISSION HANDLER
+   ========================================== */
+document.addEventListener("DOMContentLoaded", function() {
+  const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+  
+  forms.forEach(form => {
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : "Send";
+      if (submitBtn) {
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+      }
+
+      const data = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          let title = "Message Sent!";
+          let message = "Thank you! Our team will get back to you shortly.";
+          
+          if (form.id === "applicationForm") {
+             title = "Application Received!";
+             message = "Thank you for applying. Our HR team will review your profile.";
+          } else if (window.location.pathname.includes("review")) {
+             title = "Review Submitted!";
+             message = "Thank you for your valuable feedback!";
+          }
+          
+          // Show the gorgeous toast!
+          if (typeof showSuccessNotification === 'function') {
+             showSuccessNotification(title, message);
+          } else {
+             alert(message);
+          }
+          
+          // Reset the form
+          form.reset();
+          
+          if (submitBtn) {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          }
+        } else {
+          alert("Oops! There was a problem submitting your form. Please try again.");
+          if (submitBtn) {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          }
+        }
+      } catch (error) {
+        alert("Oops! There was a problem submitting your form. Please check your connection.");
+        if (submitBtn) {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
+      }
+    });
+  });
+});
+
+
+/* ==========================================
+   AI & SEO STRUCTURED DATA (JSON-LD)
+   ========================================== */
+document.addEventListener("DOMContentLoaded", function() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ethanda.com/#organization",
+        "name": "eThanda Technologies",
+        "url": "https://www.ethanda.com",
+        "logo": "https://www.ethanda.com/logo.png",
+        "sameAs": [],
+        "description": "Small Business Tech Management. We build professional websites, setup e-commerce stores, and automate workflows so you can save time and increase revenue."
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.ethanda.com/#localbusiness",
+        "name": "eThanda Technologies",
+        "url": "https://www.ethanda.com",
+        "telephone": "+1-346-382-5020",
+        "email": "contactus@ethanda.com",
+        "image": "https://www.ethanda.com/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "priceRange": "$$",
+        "description": "We take over the entire tech stack for growing businesses. Custom websites, lead generation tools, CRM automation, and software cleanup."
+      }
+    ]
+  };
+
+  // Only inject if it doesn't already exist
+  if (!document.querySelector('script[type="application/ld+json"]')) {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+});
+
+
+/* ==========================================
+   INJECT FLOATING WIDGET
+   ========================================== */
+function initFloatingWidget() {
+  const widget = document.createElement('div');
+  widget.className = 'floating-widget';
+  widget.style.alignItems = 'flex-end'; // Align text box to the bottom
+  widget.innerHTML = `
+    <div class="floating-widget-text" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: right; padding: 1rem 1.5rem; margin-bottom: 0.2rem;">
+      <strong style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.2rem;">Have questions?</strong>
+      <span style="font-size: 0.95rem; color: var(--text-secondary);"><i class="fa-solid fa-phone" style="color: var(--accent-cyan); width: 20px;"></i> (346) 382-5020</span>
+      <span style="font-size: 0.95rem; color: var(--text-secondary);"><i class="fa-brands fa-whatsapp" style="color: #25D366; width: 20px;"></i> WhatsApp Available</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="whatsapp://send?phone=13463825020" class="floating-widget-btn" style="background: #25D366; color: white; width: 55px; height: 55px; font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);" title="WhatsApp Us">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="sms:+13463825020" class="floating-widget-btn" style="width: 55px; height: 55px; font-size: 1.5rem;" title="Text Us">
+        <i class="fa-solid fa-comment-sms"></i>
+      </a>
+    </div>
+  `;
+  document.body.appendChild(widget);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(initFloatingWidget, 1500); // Load after 1.5s so it doesn't block main render
+});
