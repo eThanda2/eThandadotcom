@@ -139,7 +139,10 @@ const path = require('path');
             </style>
         </head>
         <body>
-            <img src="${logoDataUri}" class="logo" />
+            <div style="display: flex; align-items: center; justify-content: center; gap: 25px; margin-bottom: 30px; margin-top: 20px;">
+                <img src="${logoDataUri}" style="width: 90px; height: 90px; background: white; padding: 10px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.3);" />
+                <div style="font-size: 110px; font-weight: 900; line-height: 1; letter-spacing: -2px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+            </div>
             
             <h1>Are you a <span class="highlight-yellow">Small Business</span> owner?</h1>
             

@@ -273,7 +273,10 @@ const path = require('path');
             <!-- PAGE 1: FLYER -->
             <div class="page">
                 <div class="flyer-hero">
-                    <div style="font-size: 72px; font-weight: 900; margin-bottom: 20px; line-height: 1;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                        <img src="${logoDataUri}" style="width: 70px; height: 70px; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+                        <div style="font-size: 72px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                    </div>
                     <h1>Save Time. Get More Leads.<br><span class="highlight">Increase Revenue.</span></h1>
                     <div class="sub-hero">We take over your entire tech stack so you can focus on running your business.</div>
                 </div>
@@ -317,7 +320,10 @@ const path = require('path');
             <!-- PAGE 2: BROCHURE P1 -->
             <div class="page">
                 <div class="cover-hero">
-                    <div style="font-size: 96px; font-weight: 900; margin-bottom: 30px; line-height: 1;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 25px; margin-bottom: 30px;">
+                        <img src="${logoDataUri}" style="width: 90px; height: 90px; background: white; padding: 10px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+                        <div style="font-size: 96px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
+                    </div>
                     <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
                 <div class="cover-content">
