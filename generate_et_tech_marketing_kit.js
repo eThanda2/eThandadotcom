@@ -273,7 +273,7 @@ const path = require('path');
             <!-- PAGE 1: FLYER -->
             <div class="page">
                 <div class="flyer-hero">
-                    <img src="${logoDataUri}" class="logo" />
+                    <div style="font-size: 72px; font-weight: 900; margin-bottom: 20px; line-height: 1;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
                     <h1>Save Time. Get More Leads.<br><span class="highlight">Increase Revenue.</span></h1>
                     <div class="sub-hero">We take over your entire tech stack so you can focus on running your business.</div>
                 </div>
@@ -317,7 +317,7 @@ const path = require('path');
             <!-- PAGE 2: BROCHURE P1 -->
             <div class="page">
                 <div class="cover-hero">
-                    <img src="${logoDataUri}" class="cover-logo" />
+                    <div style="font-size: 96px; font-weight: 900; margin-bottom: 30px; line-height: 1;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
                     <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
                 <div class="cover-content">
