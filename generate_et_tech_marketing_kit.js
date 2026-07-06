@@ -39,6 +39,24 @@ const path = require('path');
                     page-break-after: always;
                     position: relative;
                     background: white;
+                    padding-bottom: 60px; /* Room for global bar */
+                }
+                .global-bar {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 60px;
+                    background: #00f2fe;
+                    color: #1e1b4b;
+                    padding: 0 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: 800;
+                    box-sizing: border-box;
+                    z-index: 100;
                 }
 
                 /* ---- PAGE 1: FLYER ---- */
@@ -123,24 +141,6 @@ const path = require('path');
                     margin: 0 0 15px 0;
                     font-size: 32px;
                     color: #1e1b4b;
-                }
-                .contact-box {
-                    background: #1e1b4b;
-                    color: white;
-                    display: inline-block;
-                    padding: 15px 40px;
-                    border-radius: 50px;
-                    font-size: 24px;
-                    font-weight: 700;
-                    margin-bottom: 15px;
-                }
-                .contact-box span {
-                    color: #00f2fe;
-                }
-                .website {
-                    font-size: 18px;
-                    color: #475569;
-                    font-weight: 600;
                 }
 
                 /* ---- PAGE 2: BROCHURE FRONT ---- */
@@ -303,8 +303,13 @@ const path = require('path');
 
                 <div class="flyer-footer">
                     <h2>Ready to grow your business?</h2>
-                    <div class="contact-box">Call or Text: <span>(346) 382-5020</span></div>
-                    <div class="website">www.ethanda.com &nbsp;|&nbsp; contactus@ethanda.com</div>
+                    <div style="font-size: 24px; color: #475569; font-weight: 600; margin-top: 10px;">We take over your entire tech stack so you can focus on running your business.</div>
+                </div>
+                
+                <!-- Global Bar -->
+                <div class="global-bar">
+                    <span>www.ethanda.com</span>
+                    <span>(346) 382-5020</span>
                 </div>
             </div>
 
@@ -329,6 +334,12 @@ const path = require('path');
                             <div class="stat-label">Starting Web Design</div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Global Bar -->
+                <div class="global-bar">
+                    <span>www.ethanda.com</span>
+                    <span>(346) 382-5020</span>
                 </div>
             </div>
             
@@ -376,8 +387,13 @@ const path = require('path');
                 
                 <div class="brochure-footer">
                     <div class="footer-text">Ready to completely upgrade your business?</div>
-                    <div class="footer-contact">Call or Text: (346) 382-5020</div>
-                    <div style="margin-top: 10px; color: #94a3b8;">www.ethanda.com &nbsp;|&nbsp; contactus@ethanda.com</div>
+                    <div style="margin-top: 10px; font-size: 18px; color: #94a3b8;">Our experts are ready to provide a free audit of your current tech setup.</div>
+                </div>
+                
+                <!-- Global Bar -->
+                <div class="global-bar">
+                    <span>www.ethanda.com</span>
+                    <span>(346) 382-5020</span>
                 </div>
             </div>
         </body>
