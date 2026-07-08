@@ -1343,3 +1343,55 @@ footer {
   .floating-widget { bottom: 1.5rem; right: 1.5rem; }
   .floating-widget-text { display: none; } /* Hide text on mobile to save space */
 }
+
+/* ==========================================
+   LEAD MAGNET POPUP
+   ========================================== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+.popup-overlay.active .popup-content {
+  transform: translateY(0);
+}
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.close-popup:hover {
+  color: var(--text-primary);
+}

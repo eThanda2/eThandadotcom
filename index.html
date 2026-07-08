@@ -477,6 +477,43 @@
     });
   });
 </script>
+
+<!-- Lead Magnet Popup -->
+<div id="lead-magnet-popup" class="popup-overlay">
+   <div class="popup-content">
+      <span class="close-popup" onclick="document.getElementById('lead-magnet-popup').classList.remove('active')">&times;</span>
+      <h3 style="color: var(--text-primary);"><i class="fa-solid fa-file-pdf" style="color: #e11d48; margin-right: 10px;"></i> Free Tech Guide</h3>
+      <p>Download our complete services guide and pricing to see how we can automate your business.</p>
+      <form action="https://formspree.io/f/mkolykgy" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+         <input type="email" name="email" placeholder="Enter your email" required style="padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 8px; width: 100%;">
+         <input type="hidden" name="source" value="Lead Magnet Brochure">
+         <input type="hidden" name="_next" value="https://ethanda.com/eT_Tech_Marketing_Kit.pdf">
+         <button type="submit" class="btn btn-primary" style="width: 100%;">Get the Guide</button>
+      </form>
+   </div>
+</div>
+
+<script>
+  // Show popup after 15 seconds if not seen
+  document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem('leadMagnetSeen')) {
+      setTimeout(() => {
+        document.getElementById('lead-magnet-popup').classList.add('active');
+        localStorage.setItem('leadMagnetSeen', 'true');
+      }, 15000);
+    }
+  });
+</script>
+
+<!-- Sticky Mobile Contact Widget -->
+<div class="floating-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 15px;">
+  <a href="sms:3463825020" class="floating-widget-btn" style="background: #10b981; color: white;" title="Text Us">
+    <i class="fa-solid fa-comment-sms"></i>
+  </a>
+  <a href="tel:3463825020" class="floating-widget-btn" style="background: var(--accent-cyan); color: white;" title="Call Us">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
 </body>
 </html>
 
