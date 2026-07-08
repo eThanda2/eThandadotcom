@@ -325,12 +325,12 @@ const path = require('path');
                         <img src="${logoDataUri}" style="width: 70px; height: 70px; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
                         <div style="font-size: 72px; font-weight: 900; line-height: 1; letter-spacing: -1px;"><span style="color: #00f2fe;">eT</span> <span style="color: white;">Tech</span></div>
                     </div>
-                    <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
+                    <h1 style="font-size: 46px;">Small Business & Solopreneurs.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
                 <div class="cover-content">
                     <div class="big-text">We handle the tech.<br>You handle the business.</div>
                     <div class="description">
-                        Most local businesses are losing thousands of dollars a month because their website is outdated, they miss phone calls while on the job, or they are paying for 10 different expensive software subscriptions. eT Tech partners with local businesses to solve this.
+                        Most local businesses, solopreneurs, and freelancers are losing thousands of dollars a month because their website is outdated, they miss phone calls while on the job, or they are paying for 10 different expensive software subscriptions. eT Tech partners with local businesses to solve this.
                     </div>
                     <div class="stats-grid">
                         <div class="stat-box">

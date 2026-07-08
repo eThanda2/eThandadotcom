@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "url": "https://www.ethanda.com",
         "logo": "https://www.ethanda.com/logo.png",
         "sameAs": [],
-        "description": "Small Business Tech Management. We build professional websites, setup e-commerce stores, and automate workflows so you can save time and increase revenue."
+        "description": "Small Business and Solopreneur Tech Management. We build professional websites, setup e-commerce stores, and automate workflows so you can save time and increase revenue."
       },
       {
         "@type": "LocalBusiness",

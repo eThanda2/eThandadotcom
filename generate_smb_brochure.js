@@ -174,7 +174,7 @@ const path = require('path');
             <div class="page">
                 <div class="cover-hero">
                     <img src="${logoDataUri}" class="logo" />
-                    <h1>Small Business.<br>Big <span class="highlight">Technology.</span></h1>
+                    <h1 style="font-size: 46px;">Small Business & Solopreneurs.<br>Big <span class="highlight">Technology.</span></h1>
                 </div>
                 <div class="cover-content">
                     <div class="big-text">We handle the tech.<br>You handle the business.</div>
